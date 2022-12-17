@@ -1,0 +1,80 @@
+.container {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 1rem;
+    /* row-gap: 1rem; */
+    width: 100%;
+}
+
+.list {
+    transition: ease 0.2s;
+}
+
+.icons {
+    transition: ease 0.2s;
+}
+
+.icons:hover {
+    transition: ease 0.2s;
+    color: hsl(0, 100%, 50%);
+    /* opacity: 30%; */
+    margin-top: 5px;
+}
+
+.discordtag {
+    transition: ease .2s;
+    opacity: 0;
+    color: red;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: red;
+    }
+    
+}
+
+.icons:hover+.discordtag {
+    transition: ease .2s;
+    margin-top: 5px;
+    overflow: hidden;
+    border-right: 1px solid red;
+    white-space: nowrap;
+    margin: auto auto;
+    opacity: 100;
+    margin-top: 5px;
+    animation:
+        typing 1.7s steps(20, end),
+        blink-caret 1s step-end infinite;
+}
+
+.list:hover {
+    transition: ease 0.2s;
+    color: red;
+    font-size: 21px;
+}
+
+.minicontainer {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 1rem;
+    flex-direction: row-reverse;
+}
